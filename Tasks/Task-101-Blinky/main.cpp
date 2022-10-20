@@ -19,13 +19,13 @@ int main()
         // Turn onboard LED ON  
         greenLED = 1; 
 
-        // Wait 0.2 second (1 million microseconds)
-        wait_us(100000); 
+        // Wait 1 second (1 million microseconds)
+        wait_us(1000000); 
 
         // Turn LED OFF
         greenLED = 0;
 
-        // Wait 0.2 second
-        wait_us(100000); 
+        // Wait 2 seconds
+        wait_us(2000000); 
     }
 }
