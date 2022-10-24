@@ -29,7 +29,7 @@
    - [Mocking Hardware with Pure Virtual Classes](#mocking-hardware-with-pure-virtual-classes)
    - [Porting to a specific platform](#porting-to-a-specific-platform)
    - [Arguments for loosely couple classes](#arguments-for-loosely-couple-classes)
-- [TBD Advanced Language Features](#advanced-language-features)
+- [Advanced Language Features](#advanced-language-features)
    - [Templates](#templates)
    - [Dynamic Memory Allocation](#dynamic-memory-allocation)
    - [The RAII Idiom](#the-raii-idiom)
@@ -38,10 +38,8 @@
    - [`const` and references](#const-and-references)
    - [Copy Constructors](#copy-constructors-and-operators)
    - [Move Constructors](#move-constructors-and-operators)
-- [TBD Standard Template Library](#the-standard-template-library)
+- [Standard Template Library](#the-standard-template-library)
    - [Standard Containers](#standard-containers)
-   - [Algorithms](#algorithms)
-   - [File I/O](#file-io)
 - [References](#references)
 
 ---
@@ -595,7 +593,7 @@ We essentially take an existing class (and all the effort that went into writing
 
 We also saw in a previous example that this was possible with **composition**. Both approaches can be made to work, but with composition, you would only have access to the public functions of `DigitalOut`.
 
-> When we derive a class, we gain access to the `protected` members as well as the `private` 
+> When we derive a class, we gain access to the `protected` members as well as the `public` 
 >
 > This is a key difference between inheritance and composition
 
