@@ -27,64 +27,111 @@ int main()
     //Repeat everything "forever" (until the power is removed or the chip is reset)
     while (true)
     {
-        x++;
-        //On for 500ms
-        greenLED = 1;
-        buzz.playTone("C");
-        wait_us(WAIT_TIME_MS * 1000);  //250ms
-
-        //Off for 500ms
-        greenLED = 0;    
-
-        // on for 500ms
-        yellowLED = 1;
-        buzz.playTone("D");
-        wait_us(WAIT_TIME_MS * 1000);//250ms
-        
-        //off for 500ms
-        yellowLED = 0;
-
-        //On for 500ms
-        redLED = 1;
-        buzz.playTone("E");
-        wait_us(WAIT_TIME_MS * 1000);  //250ms
-
-        //Off for 500ms
-        redLED = 0;
-
-       
-        //On for 500ms
-        redLED2 = 1;
-        buzz.playTone("F");
-        wait_us(WAIT_TIME_MS * 1000);  //250ms
-
-        //Off for 500ms
-        redLED2 = 0;    
-
-
-
-        // on for 500ms
-        yellowLED2 = 1;
-        buzz.playTone("F");
-        wait_us(WAIT_TIME_MS * 1000);//250ms
-        
-        //off for 500ms
-        yellowLED2 = 0;
-        wait_us(WAIT_TIME_MS * 1000);  //250ms
-
-        //On for 500ms
-        greenLED2 = 1;
-        buzz.playTone("G");
-        wait_us(WAIT_TIME_MS * 1000);  //250ms
-
-        //Off for 500ms
-        greenLED2 = 0;       
-        wait_us(WAIT_TIME_MS * 1000);  //250ms
-
-
     
+        //First dot 
+        greenLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(150000);  //150ms
+        
+        //Space after first dot 
+        greenLED = 0; // greenled turned off
+        buzz.rest(); // buzzer shuts off 
+
+        //Second dot 
+        wait_us(150000); // symbol space 
+        greenLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(150000);  //150ms
+
+        //Space after second dot 
+        greenLED = 0; // greenled turned off
+        buzz.rest(); // buzzer shuts off 
+
+        //Third dot 
+        wait_us(150000); // symbol space 
+        greenLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(150000);  //150ms
+        
+        //Space after third dot 
+        greenLED = 0; // greenled turned off
+        buzz.rest(); // buzzer shuts off 
+
+        wait_us(450000); // Letter space 
+
+        //Letter (O) dash 
+        // First dash 
+        yellowLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(450000);  //150ms
+
+        yellowLED = 0; // greenled turned off
+        buzz.rest();
+         
+        wait_us(150000);
+
+        //second dash letter(0)
+        yellowLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(450000);  //150ms
+
+        yellowLED = 0; // greenled turned off
+        buzz.rest();
+        
+        //Third dash letter(0)
+        yellowLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(450000);  //150ms
+
+        yellowLED = 0; // greenled turned off
+        buzz.rest();
+       
+        wait_us(450000); // space between O and the last S
+
+        //Last 
+        greenLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(150000);  //150ms
+        
+        //Space after first dot 
+        greenLED = 0; // greenled turned off
+        buzz.rest(); // buzzer shuts off 
+
+        //Second dot 
+        wait_us(150000); // symbol space 
+        greenLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(150000);  //150ms
+
+        //Space after second dot 
+        greenLED = 0; // greenled turned off
+        buzz.rest(); // buzzer shuts off 
+
+        //Third dot 
+        wait_us(150000); // symbol space 
+        greenLED = 1;  // greenLED turns on 
+        buzz.playTone("C"); // plays major scale C 
+        wait_us(150000);  //150ms
 
 
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
         //Pause
         buzz.rest();
