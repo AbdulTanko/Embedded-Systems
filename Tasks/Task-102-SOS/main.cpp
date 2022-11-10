@@ -68,7 +68,7 @@ int main()
         yellowLED = 0; // greenled turned off
         buzz.rest();
          
-        wait_us(150000);
+        wait_us(150000); 
 
         //second dash letter(0)
         yellowLED = 1;  // greenLED turns on 
@@ -77,6 +77,8 @@ int main()
 
         yellowLED = 0; // greenled turned off
         buzz.rest();
+        
+        wait_us(150000); 
         
         //Third dash letter(0)
         yellowLED = 1;  // greenLED turns on 

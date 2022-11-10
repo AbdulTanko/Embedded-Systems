@@ -8,7 +8,7 @@ DigitalOut ledGreen(LED1,1);
 DigitalOut ledBlue(LED2,1);
 DigitalOut ledRed(LED3,1);
 
-LCD_16X2_DISPLAY lcd;
+LCD_16X2_DISPLAY lcd; // lcd driver
 
 int main()
 {
@@ -33,12 +33,15 @@ int main()
 
     // This is a variable (not an oject as it has no functions) that stores a whole number (integer) in memory
     // (I used the keyword volatile to force it to use memory... long story and one for later)
-    volatile int counter = 0;
+    volatile int counter = 10;
+    /*
 
     while (true)
     {
         //Toggle the LED
-        ledBlue = !ledBlue;
+        ledBlue = !ledBlue; 
+        ledGreen = !ledGreen;
+        ledRed = !ledRed;
 
         //Add 1 to the counter "variable"
         counter = counter + 1;
@@ -49,4 +52,27 @@ int main()
         //Wait
         wait_us(WAIT_TIME_MS * 1000);
     }
-}
+    */
+
+    while (counter <= 15)
+    {
+        //Toggle the LED
+        ledBlue = !ledBlue;
+
+        //Display in the terminal
+        printf("Count: %d\n", counter);
+
+        //Wait
+        wait_us(WAIT_TIME_MS * 1000);
+
+        //Add 1 to the counter "variable"
+        counter = counter + 1;        
+    }
+
+    ledRed = 1;
+    ledGreen = 1;
+    ledBlue = 1;
+
+    wait_us(osWaitForever);
+}    
+
