@@ -1,4 +1,5 @@
 #include "uop_msb.h"
+#include <cstdio>
 using namespace uop_msb;
 
 Buzzer buzz;
@@ -22,25 +23,43 @@ BusOut ledData(LED_D0_PIN, LED_D1_PIN, LED_D2_PIN, LED_D3_PIN, LED_D4_PIN, LED_D
 int main()
 {
     printf("\nTASK-110\n");
+    
 
     // Integer
-    int count = 0;
+    int count = 30;
     printf("count = %d\n", count);
 
     // Add one to count
-    count = count + 1;
+    count = count + 2;
     printf("New value of count = %d\n", count);
 
-    // Char
     char character;
-    character = 'A';
+    character = 'Z';
     printf("The character %c has the ASCII code %d\n", character, character);
+
+    character = 'a';
+    printf("The character %c has the ASCII code %d\n", character, character);
+
+    character = 'z';
+    printf("The character %c has the ASCII code %d\n", character, character );
+    
+    character = '0';
+    printf("The character %c has the ASCII code %d\n", character, character );
+    
+    character = '9';
+    printf("The character %c has the ASCII code %d\n", character, character );
+    
+
+
+
 
     // Short
     short shortCount = 32766;
     printf("The value of shortCount is %hd\n", shortCount);
-    shortCount = shortCount + 1;
+
+    shortCount = shortCount + 2;
     printf("add 1 and shortCount is %hd\n", shortCount);
+
 
     // Long long
     long long NN = 0x12345678ABCD0001LL; //Literal in HEX
