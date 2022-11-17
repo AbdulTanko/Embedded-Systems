@@ -54,7 +54,7 @@ int main()
 
 
     // Short
-    short shortCount = 32766;
+    unsigned int shortCount = 32766;
     printf("The value of shortCount is %hd\n", shortCount);
 
     shortCount = shortCount + 2;
