@@ -29,7 +29,7 @@ int main()
     printf("\n\nTo set the delay (in ms), type in an integer number and press return\n");
     int on_time;
     int off_time;
-    int parsed = scanf("%d %d", &on_time, &off_time);
+    int parsed = scanf("%d %d", &on_time, &off_time); // 2 place holder as there are 2 values (on_time and off_time)
     
     
     printf("You entered %d correct integer values. The value was %dms\n", parsed, on_time); 
@@ -51,4 +51,5 @@ int main()
 
     printf("Invalid - please restart and try again\n");
     while(1);    
+    // task 112 finished 
 }
