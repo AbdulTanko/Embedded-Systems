@@ -9,6 +9,10 @@ DigitalOut greenLED(PC_6,1);
 int main()
 {
     //1s pause to show all LEDs are working
+    
+    redLED = 1;
+    yellowLED = 1;
+    greenLED = 1;
     wait_us(1000000);  
 
     //Reset
@@ -44,6 +48,7 @@ int main()
 
         //The whole routine now repeats
 
+        // task completed
     }
 }
 
